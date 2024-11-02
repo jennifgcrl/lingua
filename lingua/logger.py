@@ -3,6 +3,7 @@
 from datetime import timedelta
 import logging
 import math
+from os import PathLike
 import sys
 import time
 
@@ -88,7 +89,7 @@ def set_root_log_level(log_level: str):
 
 
 def init_logger(
-    log_file: str | None = None,
+    log_file: str | PathLike | None = None,
     *,
     name: str | None = None,
     level: str = "NOTSET",
